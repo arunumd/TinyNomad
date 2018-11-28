@@ -24,7 +24,7 @@ The project depends on the following libraries and environments:
 The following [link](https://drive.google.com/file/d/153M1aiCYegG0zRtJ9Sf43AjYE1P9QTQr/view?usp=sharing) contains the SIP log sheet with product backlog, iteration backlog and activity log.
 
 ## Sprint Planning Notes
-The following [link](https://drive.google.com/file/d/1VqYlH_pGjYxlB-IP6AsRIp-IpPvnU8js/view?usp=sharing) contains the dynamic notes taken in respect to this project planning and execution.
+The following [link](https://docs.google.com/document/d/19dk9er2CnaR0E2VBU0Al2PBVe32U2r813GsdChSqFbc/edit?usp=sharing) contains the dynamic notes taken in respect to this project planning and execution.
 
 ## How to run the project ?
 ```
