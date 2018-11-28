@@ -13,6 +13,9 @@ This software is protected by MIT License. For more details refer [MIT License](
 ## Solo Iterative Process(SIP) Log
 The following [link](https://drive.google.com/file/d/153M1aiCYegG0zRtJ9Sf43AjYE1P9QTQr/view?usp=sharing) contains the SIP log sheet with product backlog, iteration backlog and activity log.
 
+## Sprint Planning Notes
+The following [link](https://drive.google.com/file/d/1VqYlH_pGjYxlB-IP6AsRIp-IpPvnU8js/view?usp=sharing) contains the dynamic notes taken in respect to this project planning and execution.
+
 ## How to run the project ?
 ```
 git clone https://github.com/arunumd/TinyNomad
