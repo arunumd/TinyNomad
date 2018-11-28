@@ -10,6 +10,9 @@ A frontier exploration project using Gazebo, ROS, CMake, C++, RViz and GMapping.
 ## License
 This software is protected by MIT License. For more details refer [MIT License](LICENSE)
 
+## Solo Iterative Process(SIP) Log
+The following [link](https://drive.google.com/file/d/153M1aiCYegG0zRtJ9Sf43AjYE1P9QTQr/view?usp=sharing) contains the SIP log sheet with product backlog, iteration backlog and activity log.
+
 ## How to run the project ?
 ```
 git clone https://github.com/arunumd/TinyNomad
