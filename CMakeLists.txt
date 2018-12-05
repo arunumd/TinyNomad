@@ -15,9 +15,12 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   message_generation
   tf
+  octomap REQUIRED
 )
 
-include_directories(${GTEST_INCLUDE_DIRS})
+include_directories(${GTEST_INCLUDE_DIRS} ${OCTOMAP_INCLUDE_DIRS})
+
+target_link_libraries (${OCTOMAP_LIBRARIES})
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
