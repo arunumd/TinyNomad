@@ -36,10 +36,10 @@ include_directories(${GTEST_INCLUDE_DIRS})
 
 
 ## Generate added messages and services with any dependencies listed here
- generate_messages(
-   DEPENDENCIES
-   std_msgs
- )
+ #generate_messages(
+   #DEPENDENCIES
+   #std_msgs
+# )
 
 ###################################
 ## catkin specific configuration ##
@@ -52,7 +52,7 @@ include_directories(${GTEST_INCLUDE_DIRS})
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
   INCLUDE_DIRS include
-  LIBRARIES beginner_tutorials
+  LIBRARIES TinyNomad
   CATKIN_DEPENDS roscpp rospy std_msgs message_runtime
   #DEPENDS system_lib
 )
@@ -63,10 +63,10 @@ catkin_package(
 
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
-include_directories(
+#include_directories(
 # include
-  ${catkin_INCLUDE_DIRS}
-)
+ # ${catkin_INCLUDE_DIRS}
+#)
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
@@ -83,22 +83,22 @@ include_directories(
 # add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 
-add_executable(talker src/talker.cpp)
-target_link_libraries(talker ${catkin_LIBRARIES})
-add_dependencies(talker beginner_tutorials_generate_messages_cpp ${beginner_tutorials_EXPORTED_TARGETS})
+#add_executable(talker src/talker.cpp)
+#target_link_libraries(talker ${catkin_LIBRARIES})
+#add_dependencies(talker beginner_tutorials_generate_messages_cpp ${beginner_tutorials_EXPORTED_TARGETS})
 
-add_executable(listener src/listener.cpp)
-target_link_libraries(listener ${catkin_LIBRARIES})
-add_dependencies(listener beginner_tutorials_generate_messages_cpp)
+#add_executable(listener src/listener.cpp)
+#target_link_libraries(listener ${catkin_LIBRARIES})
+#add_dependencies(listener beginner_tutorials_generate_messages_cpp)
 
 if(CATKIN_ENABLE_TESTING)
   find_package(rostest REQUIRED)
 
-  add_rostest_gtest(
+  #add_rostest_gtest(
   #testTalker
   #test/test.launch
   #test/test.cpp
-  )
+  #)
  # target_link_libraries(
   #testTalker
   #${catkin_LIBRARIES} ${GTEST_LIBRARIES} pthread
