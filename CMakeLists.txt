@@ -23,16 +23,16 @@ include_directories(${GTEST_INCLUDE_DIRS})
 # find_package(Boost REQUIRED COMPONENTS system)
 
 ## Generate messages in the 'msg' folder
- add_message_files(
+ #add_message_files(
    #FILES
    #Num.msg
-    )
+    #)
 
 ## Generate services in the 'srv' folder
- add_service_files(
+ #add_service_files(
    #FILES
    #service.srv
- )
+ #)
 
 
 ## Generate added messages and services with any dependencies listed here
