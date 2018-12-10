@@ -40,6 +40,14 @@
 
 class Navigation {
  public:
+ 	/**
+ 	*@brief  : Default constructor
+ 	*/
+ 	Navigation() {}
+ 	/**
+ 	*@brief  : Default destructor
+ 	*/
+ 	~Navigation() {}
     /**
     *@brief  : Command for normal forward movement of turtlebot
     *@return : drivePower to turtlebot
