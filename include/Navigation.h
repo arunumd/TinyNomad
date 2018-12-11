@@ -66,6 +66,11 @@ class Navigation {
     */
     geometry_msgs::Twist stopCommand();
 
+    /**
+    *@brief  : Callback method for identifying the approach distance
+    */
+    void laserCallback(const sensor_msgs::LaserScan::ConstPtr& data);
+
  private:
     /**
     *@brief : Node handle at the beginning
