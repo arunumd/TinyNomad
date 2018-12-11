@@ -49,8 +49,10 @@
 int main(int argc, char **argv) {
     ros::init(argc, argv, "tinynomad");
     ros::Duration(10).sleep();
+    Navigation nomad;
     ros::Rate loop_rate(5);
     while (ros::ok()) {
+    	nomad = Navigation();
         ros::spinOnce();
         loop_rate.sleep();
     }
