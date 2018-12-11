@@ -15,13 +15,12 @@ find_package(catkin REQUIRED COMPONENTS
   message_runtime
 )
 
-
 ## Generate added messages and services with any dependencies listed here
- generate_messages(
+generate_messages(
    DEPENDENCIES
    std_msgs
-   move_base_msgs   sensor_msgs   
- )
+   #sensor_msgs   
+)
 
 ###########
 ## Build ##
@@ -29,13 +28,10 @@ find_package(catkin REQUIRED COMPONENTS
 
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
-include_directories(
- include
-  ${catkin_INCLUDE_DIRS}
-)
+include_directories(include ${catkin_INCLUDE_DIRS})
+
+add_executable(tinynomad src/Navigation.cpp src/main.cpp)
 
 ## Specify libraries to link a library or executable target against
- target_link_libraries(tinynomad
-   ${catkin_LIBRARIES}
- )
+target_link_libraries(tinynomad ${catkin_LIBRARIES})
 
