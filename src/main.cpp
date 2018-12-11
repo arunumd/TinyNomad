@@ -42,7 +42,7 @@
 #include "Navigation.h"
 #include <iostream>
 #include "ros/ros.h"
-#include "sensor_msgs/LaserScan"
+#include "sensor_msgs/LaserScan.h"
 #include "geometry_msgs/Twist.h"
 #include "std_msgs/String.h"
 
@@ -52,7 +52,7 @@ int main(int argc, char **argv) {
     Navigation nomad;
     ros::Rate loop_rate(5);
     while (ros::ok()) {
-    	nomad = Navigation();
+        nomad = Navigation();
         ros::spinOnce();
         loop_rate.sleep();
     }
