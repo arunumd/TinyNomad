@@ -75,7 +75,7 @@ class Navigation {
     /**
     *@brief : Node handle at the beginning
     */
-    ros::nodeHandle n;
+    ros::NodeHandle n;
     /**
     *@brief : Publisher object for publishing command velocity to turtlebot
     */
