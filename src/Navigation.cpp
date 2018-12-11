@@ -35,7 +35,7 @@
 #include "geometry_msgs/Twist.h"
 #include "std_msgs/String.h"
 
-Navigation::geometry_msgs::Twist moveCommand() {
+geometry_msgs::Twist Navigation::moveCommand() {
     drivePower.linear.x = 0.25;
     drivePower.linear.y = 0.0;
     drivePower.linear.z = 0.0;
@@ -45,7 +45,7 @@ Navigation::geometry_msgs::Twist moveCommand() {
     return drivePower;
 }
 
-Navigation::geometry_msgs::Twist turnCommand() {
+geometry_msgs::Twist Navigation::turnCommand() {
     std::random_device scramble;
     std::mt19937 num(scramble());
     std::uniform_int_distribution<int> dist(30, 100);
@@ -59,7 +59,7 @@ Navigation::geometry_msgs::Twist turnCommand() {
     return drivePower;
 }
 
-Navigation::geometry_msgs::Twist stopCommand() {
+geometry_msgs::Twist Navigation::stopCommand() {
     drivePower.linear.x = 0.0;
     drivePower.linear.y = 0.0;
     drivePower.linear.z = 0.0;
@@ -68,3 +68,4 @@ Navigation::geometry_msgs::Twist stopCommand() {
     drivePower.angular.z = 0.0;
     return drivePower;
 }
+
