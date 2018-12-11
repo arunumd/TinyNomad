@@ -28,8 +28,8 @@
 *              and also make an obstacle evasion manuevre when there is an obstacle. The class uses
 *              ros::Timer class and several callback methods for accomplishing its goals.
 ****************************************************************************************************/
-#ifndef NAVIGATION_H_
-#def NAVIGATION_H_
+#ifndef NAVIGATION_H
+#define NAVIGATION_H
 #pragma once
 
 #include <random>
@@ -44,10 +44,12 @@ class Navigation {
     *@brief  : Default constructor
     */
     Navigation() {}
+
     /**
     *@brief  : Default destructor
     */
     ~Navigation() {}
+
     /**
     *@brief  : Command for normal forward movement of turtlebot
     *@return : drivePower to turtlebot
@@ -106,4 +108,4 @@ class Navigation {
     geometry_msgs::Twist drivePower;
 };
 
-#endif NAVIGATION_H_ // NOLINT
+#endif NAVIGATION_H
