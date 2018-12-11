@@ -69,3 +69,13 @@ geometry_msgs::Twist Navigation::stopCommand() {
     return drivePower;
 }
 
+void Navigation::laserCallback(const sensor_msgs::LaserScan::ConstPtr& data) {
+    float threshold = 10;
+    for (const auto& dist : data->ranges) {
+        if (threshold > dist) {
+            threshold = dist;
+        }
+    }
+    obstacleRange = threshold;
+    ROS_DEBUG_STREAM("Approach distance to obstacle is : " << obstacleRange);
+}
