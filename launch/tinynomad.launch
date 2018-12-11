@@ -1,0 +1,11 @@
+<launch>
+
+   <arg name="rec" default="false"/>
+
+   <include file="$(find turtlebot_gazebo)/launch/turtlebot_world.launch">
+	<arg name="world_file" value="$(find tinynomad)/world/tinynomad.world"/>
+   </include>
+
+   <node name="tinynomad" pkg="tinynomad" type="tinynomad" output="screen"/>
+
+</launch>
