@@ -73,6 +73,11 @@ class Navigation {
     */
     void laserCallback(const sensor_msgs::LaserScan::ConstPtr& data);
 
+    /**
+    *@brief  : Function to return obstacle range to the called location
+    */
+    float getObstacleRange();
+
  private:
     /**
     *@brief : Node handle at the beginning
