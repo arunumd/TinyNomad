@@ -12,11 +12,10 @@ This software is protected by MIT License. For more details refer [MIT License](
 
 ## Dependencies
 The project depends on the following libraries and environments:
- - ROS Version Kinetic
+ - ROS Version Kinetic (Full Installation)
  - GCC Compiler - Version 5 or higher
  - ROS Gazebo
- - Moveit - Motion Planning Library along with Movebase
- - OMPL Planning Library
+ - ROS Turtlebot (All related packages)
  - ROS GMapping
  - CMake
 
@@ -28,14 +27,16 @@ The following [link](https://drive.google.com/file/d/1VqYlH_pGjYxlB-IP6AsRIp-IpP
 
 ## How to run the project ?
 ```
+mkdir catkin_ws
+cd catkin_ws
+mkdir src
+catkin_make
+cd src
 git clone https://github.com/arunumd/TinyNomad
-cd TinyNomad
-mkdir build
-cd build
-cmake ..
-make
-Run tests: ./test/cpp-test
-Run program: ./app/shell-app
+cd ..
+catkin_make
+source devel/setup.bash
+roslaunch tinynomad tinynomad.launch
 ```
 
 
