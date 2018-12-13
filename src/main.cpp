@@ -40,6 +40,7 @@
 *              graphical visualization of the explored environment thus far.
 ****************************************************************************************************/
 #include "Navigation.h"
+#include "Turtlebot.h"
 #include <iostream>
 #include "ros/ros.h"
 #include "sensor_msgs/LaserScan.h"
@@ -48,11 +49,11 @@
 
 int main(int argc, char **argv) {
     ros::init(argc, argv, "tinynomad");
+    Turtlebot turtle = Turtlebot();
     ros::Duration(10).sleep();
-    Navigation nomad;
     ros::Rate loop_rate(5);
     while (ros::ok()) {
-        nomad = Navigation();
+    	turtle.drive();
         ros::spinOnce();
         loop_rate.sleep();
     }
