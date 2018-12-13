@@ -35,11 +35,6 @@
 #include "geometry_msgs/Twist.h"
 #include "std_msgs/String.h"
 
-Navigation::Navigation() {
-    laserData = n.subscribe("/scan", 200, &laserCallback);
-    velPub = n.advertise<geometry_msgs::Twist> ("/mobile_base/commands/velocity", 100);
-}
-
 geometry_msgs::Twist Navigation::moveCommand() {
     drivePower.linear.x = 0.25;
     drivePower.linear.y = 0.0;
@@ -77,10 +72,12 @@ geometry_msgs::Twist Navigation::stopCommand() {
 void Navigation::laserCallback(const sensor_msgs::LaserScan::ConstPtr& data) {
     float threshold = 10;
     for (const auto& dist : data->ranges) {
-        if (threshold > dist) {
-            threshold = dist;
-        }
+        if (threshold > dist) threshold = dist;
     }
     obstacleRange = threshold;
-    ROS_DEBUG_STREAM("Approach distance to obstacle is : " << obstacleRange);
+    ROS_INFO_STREAM("Approach distance to obstacle is : " << obstacleRange);
+}
+
+float Navigation::getObstacleRange() {
+    return obstacleRange;
 }
