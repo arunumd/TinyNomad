@@ -30,7 +30,7 @@ generate_messages(
 ## Your package locations should be listed before other locations
 include_directories(include ${catkin_INCLUDE_DIRS})
 
-add_executable(tinynomad src/Navigation.cpp src/main.cpp)
+add_executable(tinynomad src/Navigation.cpp src/main.cpp src/Turtlebot.cpp)
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(tinynomad ${catkin_LIBRARIES})
