@@ -28,9 +28,9 @@
 *              and also make an obstacle evasion manuevre when there is an obstacle. The class uses
 *              ros::Timer class and several callback methods for accomplishing its goals.
 ****************************************************************************************************/
-#ifndef NAVIGATION_H
-#define NAVIGATION_H
 #pragma once
+#ifndef NAVIGATION_H_
+#define NAVIGATION_H_
 
 #include <random>
 #include "ros/ros.h"
@@ -78,34 +78,31 @@ class Navigation {
     *@brief : Node handle at the beginning
     */
     ros::NodeHandle n;
-    /**
-    *@brief : Publisher object for publishing command velocity to turtlebot
-    */
-    ros::Publisher velPub;
-    /**
-    *@brief : Subscriber object for subscribing to laser range from turtlebot
-    */
-    ros::Subscriber laserData;
+
     /**
     *@brief : Variable for storing obstacle range
     */
     float obstacleRange;
+
     /**
     *@brief : Timer object for obstacle evasion of turtlebot
     */
     ros::Timer normalTurnTimer;
+
     /**
     *@brief : Timer object for normal driving of turtlebot
     */
     ros::Timer driveTimer;
+
     /**
     *@brief : Timer object for periodic turning of turtlebot
     */
     ros::Timer periodicTurnTimer;
+
     /**
     *@brief : Message object for sending command velocity to turtlebot
     */
     geometry_msgs::Twist drivePower;
 };
 
-#endif NAVIGATION_H
+#endif // NAVIGATION_H_
