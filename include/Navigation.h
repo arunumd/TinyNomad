@@ -43,12 +43,12 @@ class Navigation {
     /**
     *@brief  : Default constructor
     */
-    Navigation() {}
+    Navigation();
 
     /**
     *@brief  : Default destructor
     */
-    ~Navigation() {}
+    ~Navigation();
 
     /**
     *@brief  : Command for normal forward movement of turtlebot
