@@ -35,8 +35,12 @@
 #include "geometry_msgs/Twist.h"
 #include "std_msgs/String.h"
 
+Navigation::Navigation() : obstacleRange(0) {}
+
+Navigation::~Navigation() {}
+
 geometry_msgs::Twist Navigation::moveCommand() {
-    drivePower.linear.x = 0.25;
+    drivePower.linear.x = 1.0;
     drivePower.linear.y = 0.0;
     drivePower.linear.z = 0.0;
     drivePower.angular.x = 0.0;
@@ -48,7 +52,7 @@ geometry_msgs::Twist Navigation::moveCommand() {
 geometry_msgs::Twist Navigation::turnCommand() {
     std::random_device scramble;
     std::mt19937 num(scramble());
-    std::uniform_int_distribution<int> dist(30, 100);
+    std::uniform_int_distribution<int> dist(30, 60);
     float angle = dist(num);
     drivePower.linear.x = 0.0;
     drivePower.linear.y = 0.0;
@@ -70,9 +74,12 @@ geometry_msgs::Twist Navigation::stopCommand() {
 }
 
 void Navigation::laserCallback(const sensor_msgs::LaserScan::ConstPtr& data) {
-    float threshold = 10;
+    float threshold = 25;
     for (const auto& dist : data->ranges) {
-        if (threshold > dist) threshold = dist;
+        ROS_INFO_STREAM("The actual range is : " << dist);
+        if (threshold > dist) {
+            threshold = dist;
+        }
     }
     obstacleRange = threshold;
     ROS_INFO_STREAM("Approach distance to obstacle is : " << obstacleRange);
