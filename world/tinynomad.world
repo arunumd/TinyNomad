@@ -127,10 +127,10 @@
       <pose frame=''>-2.68667 4.95773 0 0 -0 0</pose>
     </model>
     <state world_name='default'>
-      <sim_time>28960 177000000</sim_time>
-      <real_time>475 960299350</real_time>
-      <wall_time>1544683168 755975492</wall_time>
-      <iterations>450771</iterations>
+      <sim_time>29079 178000000</sim_time>
+      <real_time>28 749532565</real_time>
+      <wall_time>1544863314 225339518</wall_time>
+      <iterations>28583</iterations>
       <model name='Fast Food'>
         <pose frame=''>-3.09882 3.36538 0 0 -0 0</pose>
         <scale>1 1 1</scale>
@@ -277,7 +277,7 @@
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose frame=''>-1.42922 -13.8468 22.9085 0 1.09453 1.44998</pose>
+        <pose frame=''>1.05915 -8.8321 13.578 0 1.09453 1.44998</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
