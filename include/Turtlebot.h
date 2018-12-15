@@ -41,16 +41,12 @@ public:
     /**
     *@brief : Default constructor
     */
-    Turtlebot() {
-        Navigation nomad = Navigation();
-        laserData = n.subscribe("/scan", 1000, &Navigation::laserCallback, &nomad);
-        velPub = n.advertise<geometry_msgs::Twist> ("/mobile_base/commands/velocity", 100);
-    }
+    Turtlebot();
 
     /**
     *@brief : Default destructor
     */
-    ~Turtlebot() {}
+    ~Turtlebot();
 
     /**
     *@brief : Method to publish velocity messages based on laser range
@@ -61,7 +57,7 @@ private:
     /**
     *@brief : Create an instance of the navigation class
     */
-    Navigation nomad;
+    Navigation nomad = Navigation();
     /**
     *@brief : Create a nodehandle
     */
