@@ -1,0 +1,4 @@
+<launch>
+ <node name="tinynomad" pkg="tinynomad" type="tinynomad" output="screen"/>
+ <test pkg="tinynomad" test-name="tinynomadTest" type="tinynomadTest" />
+</launch>
