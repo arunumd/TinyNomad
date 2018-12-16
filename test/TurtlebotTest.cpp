@@ -28,3 +28,11 @@
 #include "ros/ros.h"
 #include <gtest/gtest.h>
 #include "../include/Turtlebot.h"
+#include "../include/Navigation.h"
+
+TEST(TurtleTest, OverallTest) {
+	Navigation nav = Navigation();
+	Turtlebot turtle = Turtlebot();
+	auto dist = nav.getObstacleRange();
+	EXPECT_EQ(2, turtle.drive());
+}
