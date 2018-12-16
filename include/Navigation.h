@@ -63,12 +63,6 @@ class Navigation {
     geometry_msgs::Twist turnCommand();
 
     /**
-    *@brief  : Command for stopping the movement of turtlebot
-    *@return : drivePower to turtlebot
-    */
-    geometry_msgs::Twist stopCommand();
-
-    /**
     *@brief  : Callback method for identifying the approach distance
     */
     void laserCallback(const sensor_msgs::LaserScan::ConstPtr& data);
