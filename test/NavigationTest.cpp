@@ -43,5 +43,26 @@ TEST(NavigationTest, LinearTest) {
 }
 
 /**
-*
+*@brief : Unit test to check if the turn velocity is positive
 */
+TEST(NavigationTest, TurnTest) {
+	Navigation nav = Navigation();
+	EXPECT_EQ(0.0, nav.turnCommand().linear.x);
+	EXPECT_EQ(0.0, nav.turnCommand().linear.y);
+	EXPECT_EQ(0.0, nav.turnCommand().linear.z);
+	EXPECT_EQ(0.0, nav.turnCommand().angular.x);
+	EXPECT_EQ(0.0, nav.turnCommand().angular.y);
+	EXPECT_LE(1.0, nav.turnCommand().angular.z);
+}
+
+/**
+*@brief : Unit test to check callback function
+*/
+TEST(NavigationTest, LaserTest) {
+	Navigation nav = Navigation();
+	ros::NodeHandle n;
+	ros::Subscriber laserSub =
+	    n.subscribe("/scan", 1000,
+	                &Navigation::laserCallback, &nav);
+	EXPECT_EQ(0.0, nav.getObstacleRange());
+}
