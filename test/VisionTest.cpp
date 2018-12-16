@@ -29,3 +29,6 @@
 #include "ros/ros.h"
 #include <gtest/gtest.h>
 #include "../include/Vision.h"
+
+TEST(VisionTest, First) {
+}
