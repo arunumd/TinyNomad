@@ -63,16 +63,6 @@ geometry_msgs::Twist Navigation::turnCommand() {
     return drivePower;
 }
 
-geometry_msgs::Twist Navigation::stopCommand() {
-    drivePower.linear.x = 0.0;
-    drivePower.linear.y = 0.0;
-    drivePower.linear.z = 0.0;
-    drivePower.angular.x = 0.0;
-    drivePower.angular.y = 0.0;
-    drivePower.angular.z = 0.0;
-    return drivePower;
-}
-
 void Navigation::laserCallback(const sensor_msgs::LaserScan::ConstPtr& data) {
     float threshold = 25;
     for (const auto& dist : data->ranges) {
