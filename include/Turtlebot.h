@@ -31,6 +31,7 @@
 #define TURTLEBOT_H_
 
 #include "Navigation.h"
+#include "Vision.h"
 #include "ros/ros.h"
 #include "sensor_msgs/LaserScan.h"
 #include "geometry_msgs/Twist.h"
@@ -70,6 +71,14 @@ private:
     *@brief : Subscriber object for subscribing to laser range from turtlebot
     */
     ros::Subscriber laserData;
+    /**
+    *@brief : Create a vision class object
+    */
+    Vision camera = Vision();
+    /**
+    *@brief : Create a subscriber object for turtlebot camera
+    */
+    ros::Subscriber cameraData;
 };
 
-#endif // TURTLEBOT_H_
+#endif
