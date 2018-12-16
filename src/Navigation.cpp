@@ -52,7 +52,7 @@ geometry_msgs::Twist Navigation::moveCommand() {
 geometry_msgs::Twist Navigation::turnCommand() {
     std::random_device scramble;
     std::mt19937 num(scramble());
-    std::uniform_int_distribution<int> dist(30, 60);
+    std::uniform_int_distribution<int> dist(0, 360);
     float angle = dist(num);
     drivePower.linear.x = 0.0;
     drivePower.linear.y = 0.0;
