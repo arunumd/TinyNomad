@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(TinyNomad)
+project(tinynomad)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
@@ -51,8 +51,8 @@ include_directories(${GTEST_INCLUDE_DIRS})
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-  INCLUDE_DIRS include
-  LIBRARIES TinyNomad
+  #INCLUDE_DIRS include
+  LIBRARIES tinynomad
   CATKIN_DEPENDS roscpp rospy std_msgs message_runtime
   #DEPENDS system_lib
 )
@@ -63,10 +63,10 @@ catkin_package(
 
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
-#include_directories(
-# include
- # ${catkin_INCLUDE_DIRS}
-#)
+include_directories(
+ include
+  ${catkin_INCLUDE_DIRS}
+)
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
