@@ -27,6 +27,7 @@
 ****************************************************************************************************/
 #include "Navigation.h"
 #include "Turtlebot.h"
+#include "Vision.h"
 #include "ros/ros.h"
 #include "sensor_msgs/LaserScan.h"
 #include "geometry_msgs/Twist.h"
@@ -37,6 +38,7 @@
 Turtlebot::Turtlebot() {
 	laserData = n.subscribe("/scan", 1000, &Navigation::laserCallback, &nomad);
 	velPub = n.advertise<geometry_msgs::Twist> ("/mobile_base/commands/velocity", 100);
+	cameraData = n.subscribe<sensor_msgs::Image> ("/camera/rgb/image_raw", 100, &Vision::cameraCallback, &camera);
 }
 
 Turtlebot::~Turtlebot() {}
