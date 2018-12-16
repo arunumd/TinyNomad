@@ -39,7 +39,8 @@ target_link_libraries(tinynomad ${catkin_LIBRARIES} ${OpenCV_LIBS})
 
 if(CATKIN_ENABLE_TESTING)
   find_package(rostest REQUIRED)
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -O0 --coverage")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -O0)
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --coverage")
   add_rostest_gtest(tinynomadTest test/turtleTest.launch test/tinynomadTest.cpp test/NavigationTest.cpp 
                     test/VisionTest.cpp test/TurtlebotTest.cpp src/Navigation.cpp  
                     src/Vision.cpp src/Turtlebot.cpp)
