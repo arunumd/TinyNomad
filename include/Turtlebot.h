@@ -52,7 +52,7 @@ public:
     /**
     *@brief : Method to publish velocity messages based on laser range
     */
-    void drive();
+    int drive();
 
 private:
     /**
