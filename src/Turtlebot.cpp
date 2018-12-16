@@ -43,14 +43,16 @@ Turtlebot::Turtlebot() {
 
 Turtlebot::~Turtlebot() {}
 
-void Turtlebot::drive() {
+int Turtlebot::drive() {
 	auto dist = nomad.getObstacleRange();
 	ROS_INFO_STREAM("The distance to obstacle is : " << dist);
 	if (dist > 1.50) {
 		velPub.publish(nomad.moveCommand());
 		ROS_INFO_STREAM("Move command working !");
+		return 1;
 	} else {
 		velPub.publish(nomad.turnCommand());
 		ROS_INFO_STREAM("Turn command working !");
+		return 2;
 	}
 }
