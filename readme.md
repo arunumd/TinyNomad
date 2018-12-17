@@ -1,6 +1,6 @@
 # TinyNomad
-[![Build Status](https://travis-ci.org/arunumd/TinyNomad.svg?branch=master)](https://travis-ci.org/arunumd/TinyNomad)
-[![Coverage Status](https://coveralls.io/repos/github/arunumd/TinyNomad/badge.svg?branch=master)](https://coveralls.io/github/arunumd/TinyNomad?branch=master)
+[![Build Status](https://travis-ci.org/arunumd/TinyNomad.svg?branch=Backup)](https://travis-ci.org/arunumd/TinyNomad)
+[![Coverage Status](https://coveralls.io/repos/github/arunumd/TinyNomad/badge.svg?branch=Backup)](https://coveralls.io/github/arunumd/TinyNomad?branch=Backup)
 ---
 
 ## Overview
