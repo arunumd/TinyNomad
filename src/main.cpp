@@ -1,9 +1,9 @@
 /**************************************************************************************************
-* @file      : main.cpp
-* @author    : Arun Kumar Devarajulu
-* @date      : December 9, 2018
-* @copyright : 2018, Arun Kumar Devarajulu
-* @license   : MIT License
+* @file        main.cpp
+* @author      Arun Kumar Devarajulu
+* @date        December 9, 2018
+* @copyright   2018, Arun Kumar Devarajulu
+* @license     MIT License
 *
 *              Permission is hereby granted, free of charge, to any person obtaining a copy
 *              of this software and associated documentation files (the "Software"), to deal
@@ -23,7 +23,7 @@
 *              OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 *              SOFTWARE.
 *
-* @brief     : The main.cpp file contains the implementation of the autonomous exploration of
+* @brief       The main.cpp file contains the implementation of the autonomous exploration of
 *              unknown environment/ frontier detection project. This project is based on a gazebo
 *              simulation of random exploration of an unknown environment. The turtlebot has a
 *              laser scanner which continuously gives an environment feedback (distance detected
