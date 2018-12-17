@@ -39,7 +39,7 @@
 #include <opencv2/highgui/highgui.hpp>
 
 class Vision {
- public:
+public:
     /**
     *@brief   Default constructor
     */
@@ -52,9 +52,15 @@ class Vision {
 
     /**
     *@brief   Callback function for turtlebot camera subscriber
-    *@param   picture is the picture coming from the robot 
+    *@param   picture is the picture coming from the robot
     */
     void cameraCallback(const sensor_msgs::ImageConstPtr& picture);
+
+private:
+    /**
+    *@brief   Variable to trigger snapshot from camera
+    */
+    int counter;
 };
 
 #endif
