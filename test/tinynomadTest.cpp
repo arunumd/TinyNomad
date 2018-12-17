@@ -1,9 +1,9 @@
 /**************************************************************************************************
-* @file      : tinynomadTest.cpp
-* @author    : Arun Kumar Devarajulu
-* @date      : December 15, 2018
-* @copyright : 2018, Arun Kumar Devarajulu
-* @license   : MIT License
+* @file        tinynomadTest.cpp
+* @author      Arun Kumar Devarajulu
+* @date        December 15, 2018
+* @copyright   2018, Arun Kumar Devarajulu
+* @license     MIT License
 *
 *              Permission is hereby granted, free of charge, to any person obtaining a copy
 *              of this software and associated documentation files (the "Software"), to deal
@@ -23,17 +23,17 @@
 *              OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 *              SOFTWARE.
 *
-* @brief     : The tinynomadTest.cpp file is the master test file for running all Google tests for
+* @brief       The tinynomadTest.cpp file is the master test file for running all Google tests for
 *              all classes in the project
 ****************************************************************************************************/
-#include <ros/ros.h>
 #include <gtest/gtest.h>
+#include <ros/ros.h>
 
 /**
- * @brief  : main function to run all Google tests
- * @param  : argc is the no. of input arguments
- * @param  : argv is the array of input arguments
- * @return : 0 if all tests pass else 1
+ * @brief    main function to run all Google tests
+ * @param    argc is the no. of input arguments
+ * @param    argv is the array of input arguments
+ * @return   0 if all tests pass else 1
  */
 int main(int argc, char **argv) {
   ros::init(argc, argv, "tinynomadTest");
