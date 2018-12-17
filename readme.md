@@ -7,6 +7,12 @@
 
 A frontier exploration project using Gazebo, ROS, CMake, C++, RViz, OpenCV, cv_bridge and GMapping. The exploring agent is a turtlebot simulated in an environment with unknown obstacles and topology. The robot makes random moves and learns the environment from sensor scan data. The robot uses a simple environment sensing and decision making algorithm. The laser range finder present in the mini turtlebot, collects continuous laser range data from the environment and the obstacles surrounding the robot. Based on this data, we calculate the approximate approach distance to any obstacle directly on the robot's current trajectory. This effect is achieved by a laser callback function. Based on this data, the robot decides to take a random turn (in a random angle from its position) if the range appears to be very close to the robot, to avoid colliding into the obstacle. Later, if the new trajectory appears to be safe, the robot moves in a straight line with constant linear velocity until sensing another obstacle in its new path. This cycle keeps repeating indefinitely.
 
+**TinyNomad inside Gazebo**
+
+![TinyNomad1](results/TinyNomad_in_Gazebo_1.png)
+
+![TinyNomad2](results/TinyNomad_in_Gazebo_2.png)
+
 ## About the Author
 
 Arun Kumar Devarajulu, is a graduate student pursuing M. Engg Robotics at University of Maryland, College Park, MD. He is a Mechanical Engineer by background and also worked in the patent industry for a long time before making a career change into Robotics. His interests in robotics include: Computer Vision; Path Planning and machine Learning.
