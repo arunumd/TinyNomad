@@ -1,9 +1,9 @@
 /**************************************************************************************************
-* @file      : Turtlebot.h
-* @author    : Arun Kumar Devarajulu
-* @date      : December 11, 2018
-* @copyright : 2018, Arun Kumar Devarajulu
-* @license   : MIT License
+* @file        Turtlebot.h
+* @author      Arun Kumar Devarajulu
+* @date        December 11, 2018
+* @copyright   2018, Arun Kumar Devarajulu
+* @license     MIT License
 *
 *              Permission is hereby granted, free of charge, to any person obtaining a copy
 *              of this software and associated documentation files (the "Software"), to deal
@@ -23,7 +23,7 @@
 *              OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 *              SOFTWARE.
 *
-* @brief     : The Turtlebot.h class is used for publishing velocity messages based on laser scan
+* @brief       The Turtlebot.h class is used for publishing velocity messages based on laser scan
 *              feedbacks from the Navigation class.
 ****************************************************************************************************/
 #pragma once
@@ -40,43 +40,45 @@
 class Turtlebot {
  public:
     /**
-    *@brief : Default constructor
+    *@brief   Default constructor
     */
     Turtlebot();
 
     /**
-    *@brief : Default destructor
+    *@brief   Default destructor
     */
     ~Turtlebot();
 
     /**
-    *@brief : Method to publish velocity messages based on laser range
+    *@brief   Method to publish velocity messages based on laser range
+    *@return  1 if moving forward
+    *@return  2 if taking a turn
     */
     int drive();
 
  private:
     /**
-    *@brief : Create an instance of the navigation class
+    *@brief   Create an instance of the navigation class
     */
     Navigation nomad = Navigation();
     /**
-    *@brief : Create a nodehandle
+    *@brief   Create a nodehandle
     */
     ros::NodeHandle n;
     /**
-    *@brief : Publisher object for publishing command velocity to turtlebot
+    *@brief   Publisher object for publishing command velocity to turtlebot
     */
     ros::Publisher velPub;
     /**
-    *@brief : Subscriber object for subscribing to laser range from turtlebot
+    *@brief   Subscriber object for subscribing to laser range from turtlebot
     */
     ros::Subscriber laserData;
     /**
-    *@brief : Create a vision class object
+    *@brief   Create a vision class object
     */
     Vision camera = Vision();
     /**
-    *@brief : Create a subscriber object for turtlebot camera
+    *@brief   Create a subscriber object for turtlebot camera
     */
     ros::Subscriber cameraData;
 };
