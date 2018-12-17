@@ -54,9 +54,12 @@ void Vision::cameraCallback(const sensor_msgs::ImageConstPtr& picture) {
         return;
     }
 
-    // Let's now proceed to sequentially save all
-    // the pictures in a drive location
-    std::ostringstream fileName;
-    fileName << "Sanpshot taken at " << ros::WallTime::now() << ".jpg";
-    cv::imwrite(fileName.str(), picPtr->image);
+    // Let's now proceed to save pictures at specific intervals
+    counter++;
+    if (counter % 10000 == 0) {
+        std::ostringstream fileName;
+        fileName << "Sanpshot taken at " << ros::WallTime::now() << ".jpg";
+        cv::imwrite(fileName.str(), picPtr->image);
+        counter = 0;
+    }
 }
