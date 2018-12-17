@@ -1,9 +1,9 @@
 /**************************************************************************************************
-* @file      : Vision.cpp
-* @author    : Arun Kumar Devarajulu
-* @date      : December 15, 2018
-* @copyright : 2018, Arun Kumar Devarajulu
-* @license   : MIT License
+* @file        Vision.cpp
+* @author      Arun Kumar Devarajulu
+* @date        December 15, 2018
+* @copyright   2018, Arun Kumar Devarajulu
+* @license     MIT License
 *
 *              Permission is hereby granted, free of charge, to any person obtaining a copy
 *              of this software and associated documentation files (the "Software"), to deal
@@ -23,7 +23,7 @@
 *              OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 *              SOFTWARE.
 *
-* @brief     : The Vision.cpp file has implementation details for the Vision class. The vision
+* @brief       The Vision.cpp file has implementation details for the Vision class. The vision
 *              class is used for subscribing to the turtle bot camera and save the image to a
 *              folder location using opencv and ros bridging
 ****************************************************************************************************/
