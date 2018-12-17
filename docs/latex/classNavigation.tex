@@ -1,0 +1,73 @@
+\hypertarget{classNavigation}{}\section{Navigation Class Reference}
+\label{classNavigation}\index{Navigation@{Navigation}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNavigation_a81fdffdefe46340da5fa6c570066b42b}{Navigation} ()\hypertarget{classNavigation_a81fdffdefe46340da5fa6c570066b42b}{}\label{classNavigation_a81fdffdefe46340da5fa6c570066b42b}
+
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{classNavigation_addd4022d716df48f4e55a1db69361ba7}{$\sim$\+Navigation} ()\hypertarget{classNavigation_addd4022d716df48f4e55a1db69361ba7}{}\label{classNavigation_addd4022d716df48f4e55a1db69361ba7}
+
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+geometry\+\_\+msgs\+::\+Twist \hyperlink{classNavigation_a0d5ecbd5efcd250ceab9dd58d98f46dd}{move\+Command} ()
+\begin{DoxyCompactList}\small\item\em Command for normal forward movement of turtlebot. \end{DoxyCompactList}\item 
+geometry\+\_\+msgs\+::\+Twist \hyperlink{classNavigation_a2dc96ed9714f94b19ee026df3d7231b8}{turn\+Command} ()
+\begin{DoxyCompactList}\small\item\em Command for random turn manuevre of turtlebot. \end{DoxyCompactList}\item 
+void \hyperlink{classNavigation_a7ad2aff0c5dd26c698da92bec5dde402}{laser\+Callback} (const sensor\+\_\+msgs\+::\+Laser\+Scan\+::\+Const\+Ptr \&data)
+\begin{DoxyCompactList}\small\item\em Callback method for identifying the approach distance. \end{DoxyCompactList}\item 
+float \hyperlink{classNavigation_ae560b17a586f5340e31fffe865096d96}{get\+Obstacle\+Range} ()\hypertarget{classNavigation_ae560b17a586f5340e31fffe865096d96}{}\label{classNavigation_ae560b17a586f5340e31fffe865096d96}
+
+\begin{DoxyCompactList}\small\item\em Function to return obstacle range to the called location. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{Navigation@{Navigation}!laser\+Callback@{laser\+Callback}}
+\index{laser\+Callback@{laser\+Callback}!Navigation@{Navigation}}
+\subsubsection[{\texorpdfstring{laser\+Callback(const sensor\+\_\+msgs\+::\+Laser\+Scan\+::\+Const\+Ptr \&data)}{laserCallback(const sensor_msgs::LaserScan::ConstPtr &data)}}]{\setlength{\rightskip}{0pt plus 5cm}void Navigation\+::laser\+Callback (
+\begin{DoxyParamCaption}
+\item[{const sensor\+\_\+msgs\+::\+Laser\+Scan\+::\+Const\+Ptr \&}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{classNavigation_a7ad2aff0c5dd26c698da92bec5dde402}{}\label{classNavigation_a7ad2aff0c5dd26c698da92bec5dde402}
+
+
+Callback method for identifying the approach distance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & is the laser feedback in the form of distance coming from the robot\textquotesingle{}s laser rangefinder \\
+\hline
+\end{DoxyParams}
+\index{Navigation@{Navigation}!move\+Command@{move\+Command}}
+\index{move\+Command@{move\+Command}!Navigation@{Navigation}}
+\subsubsection[{\texorpdfstring{move\+Command()}{moveCommand()}}]{\setlength{\rightskip}{0pt plus 5cm}geometry\+\_\+msgs\+::\+Twist Navigation\+::move\+Command (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNavigation_a0d5ecbd5efcd250ceab9dd58d98f46dd}{}\label{classNavigation_a0d5ecbd5efcd250ceab9dd58d98f46dd}
+
+
+Command for normal forward movement of turtlebot. 
+
+\begin{DoxyReturn}{Returns}
+drive\+Power to turtlebot 
+\end{DoxyReturn}
+\index{Navigation@{Navigation}!turn\+Command@{turn\+Command}}
+\index{turn\+Command@{turn\+Command}!Navigation@{Navigation}}
+\subsubsection[{\texorpdfstring{turn\+Command()}{turnCommand()}}]{\setlength{\rightskip}{0pt plus 5cm}geometry\+\_\+msgs\+::\+Twist Navigation\+::turn\+Command (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNavigation_a2dc96ed9714f94b19ee026df3d7231b8}{}\label{classNavigation_a2dc96ed9714f94b19ee026df3d7231b8}
+
+
+Command for random turn manuevre of turtlebot. 
+
+\begin{DoxyReturn}{Returns}
+drive\+Power to turtlebot 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/arun/\+Documents/catkin\+\_\+ws/src/\+Tiny\+Nomad/include/Navigation.\+h\item 
+/home/arun/\+Documents/catkin\+\_\+ws/src/\+Tiny\+Nomad/src/Navigation.\+cpp\end{DoxyCompactItemize}
