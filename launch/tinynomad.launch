@@ -8,4 +8,6 @@
 
    <node name="tinynomad" pkg="tinynomad" type="tinynomad" output="screen"/>
 
+   <node name="record" pkg="rosbag" type="record" args="-a -O $(find tinynomad)/results/recording.bag -x /camera/(.*)" if="$(arg rec)"/>
+
 </launch>
