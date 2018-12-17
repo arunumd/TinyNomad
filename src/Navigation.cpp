@@ -1,9 +1,9 @@
 /**************************************************************************************************
-* @file      : Navigation.cpp
-* @author    : Arun Kumar Devarajulu
-* @date      : December 9, 2018
-* @copyright : 2018, Arun Kumar Devarajulu
-* @license   : MIT License
+* @file        Navigation.cpp
+* @author      Arun Kumar Devarajulu
+* @date        December 9, 2018
+* @copyright   2018, Arun Kumar Devarajulu
+* @license     MIT License
 *
 *              Permission is hereby granted, free of charge, to any person obtaining a copy
 *              of this software and associated documentation files (the "Software"), to deal
@@ -23,7 +23,7 @@
 *              OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 *              SOFTWARE.
 *
-* @brief     : The Navigation.h file has class declarations for instructing turtlebot to move
+* @brief       The Navigation.h file has class declarations for instructing turtlebot to move
 *              straight when there are no obstacles while performing a random turn every 60 seconds;
 *              and also make an obstacle evasion manuevre when there is an obstacle. The class uses
 *              ros::Timer class and several callback methods for accomplishing its goals.
