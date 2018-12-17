@@ -1,9 +1,9 @@
 /**************************************************************************************************
-* @file      : TurtlebotTest.cpp
-* @author    : Arun Kumar Devarajulu
-* @date      : December 15, 2018
-* @copyright : 2018, Arun Kumar Devarajulu
-* @license   : MIT License
+* @file        TurtlebotTest.cpp
+* @author      Arun Kumar Devarajulu
+* @date        December 15, 2018
+* @copyright   2018, Arun Kumar Devarajulu
+* @license     MIT License
 *
 *              Permission is hereby granted, free of charge, to any person obtaining a copy
 *              of this software and associated documentation files (the "Software"), to deal
@@ -23,16 +23,19 @@
 *              OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 *              SOFTWARE.
 *
-* @brief     : The TurtlebotTest.cpp file contains all the test cases for the Turtlebot class
+* @brief       The TurtlebotTest.cpp file contains all the test cases for the Turtlebot class
 ****************************************************************************************************/
-#include "ros/ros.h"
 #include <gtest/gtest.h>
 #include "../include/Turtlebot.h"
 #include "../include/Navigation.h"
+#include "ros/ros.h"
 
+/**
+*@brief  : To check if the Turtlebot is returning correct obstacle range
+*/
 TEST(TurtleTest, OverallTest) {
-	Navigation nav = Navigation();
-	Turtlebot turtle = Turtlebot();
-	auto dist = nav.getObstacleRange();
-	EXPECT_EQ(2, turtle.drive());
+    Navigation nav = Navigation();
+    Turtlebot turtle = Turtlebot();
+    auto dist = nav.getObstacleRange();
+    EXPECT_EQ(2, turtle.drive());
 }
