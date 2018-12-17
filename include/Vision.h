@@ -39,7 +39,7 @@
 #include <opencv2/highgui/highgui.hpp>
 
 class Vision {
-public:
+ public:
     /**
     *@brief   Default constructor
     */
@@ -56,7 +56,7 @@ public:
     */
     void cameraCallback(const sensor_msgs::ImageConstPtr& picture);
 
-private:
+ private:
     /**
     *@brief   Variable to trigger snapshot from camera
     */
