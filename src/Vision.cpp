@@ -29,12 +29,12 @@
 ****************************************************************************************************/
 #include "Turtlebot.h"
 #include "Vision.h"
-#include "ros/ros.h"
-#include <iostream>
 #include <sensor_msgs/Image.h>
 #include <cv_bridge/cv_bridge.h>
 #include <sensor_msgs/image_encodings.h>
 #include <image_transport/image_transport.h>
+#include <iostream>
+#include "ros/ros.h"
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
@@ -48,11 +48,14 @@ void Vision::cameraCallback(const sensor_msgs::ImageConstPtr& picture) {
     try {
         picPtr = cv_bridge::toCvCopy(picture, "bgr8");
     } catch (cv_bridge::Exception& exp) {
-        ROS_ERROR_STREAM("There was a cv_bridge connection problem : " << exp.what());
+        ROS_ERROR_STREAM(\
+                         "There was a cv_bridge connection problem : "\
+                         << exp.what());
         return;
     }
 
-    // Let's now proceed to sequentially save all the pictures in a drive location
+    // Let's now proceed to sequentially save all
+    // the pictures in a drive location
     std::ostringstream fileName;
     fileName << "Sanpshot taken at " << ros::WallTime::now() << ".jpg";
     cv::imwrite(fileName.str(), picPtr->image);

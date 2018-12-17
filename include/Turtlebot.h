@@ -38,7 +38,7 @@
 #include "std_msgs/String.h"
 
 class Turtlebot {
-public:
+ public:
     /**
     *@brief : Default constructor
     */
@@ -54,7 +54,7 @@ public:
     */
     int drive();
 
-private:
+ private:
     /**
     *@brief : Create an instance of the navigation class
     */

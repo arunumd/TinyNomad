@@ -29,37 +29,37 @@
 #ifndef VISION_H_
 #define VISION_H_
 
-#include "ros/ros.h"
-#include <iostream>
 #include <sensor_msgs/Image.h>
 #include <sensor_msgs/image_encodings.h>
 #include <image_transport/image_transport.h>
+#include <iostream>
+#include "ros/ros.h"
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 
 class Vision {
  public:
-	/**
-	*@brief : Default constructor
-	*/
-	Vision();
+    /**
+    *@brief : Default constructor
+    */
+    Vision();
 
-	/**
-	*@brief : Default destructor
-	*/
-	~Vision();
+    /**
+    *@brief : Default destructor
+    */
+    ~Vision();
 
-	/**
-	*@brief : Callback function for turtlebot camera subscriber
-	*/
-	void cameraCallback(const sensor_msgs::ImageConstPtr& picture);
+    /**
+    *@brief : Callback function for turtlebot camera subscriber
+    */
+    void cameraCallback(const sensor_msgs::ImageConstPtr& picture);
 
  private:
- 	/**
- 	*@brief : Create a nodehandle object
- 	*/
- 	ros::NodeHandle cn;
+    /**
+    *@brief : Create a nodehandle object
+    */
+    ros::NodeHandle cn;
 };
 
 #endif

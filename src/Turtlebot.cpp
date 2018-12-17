@@ -28,31 +28,36 @@
 #include "Navigation.h"
 #include "Turtlebot.h"
 #include "Vision.h"
+#include <iostream>
+#include <ostream>
 #include "ros/ros.h"
 #include "sensor_msgs/LaserScan.h"
 #include "geometry_msgs/Twist.h"
 #include "std_msgs/String.h"
-#include <iostream>
-#include <ostream>
+
 
 Turtlebot::Turtlebot() {
-	laserData = n.subscribe("/scan", 1000, &Navigation::laserCallback, &nomad);
-	velPub = n.advertise<geometry_msgs::Twist> ("/mobile_base/commands/velocity", 100);
-	cameraData = n.subscribe<sensor_msgs::Image> ("/camera/rgb/image_raw", 100, &Vision::cameraCallback, &camera);
+    laserData = n.subscribe("/scan", 1000, \
+                            &Navigation::laserCallback, &nomad);
+    velPub = n.advertise<geometry_msgs::Twist>\
+             ("/mobile_base/commands/velocity", 100);
+    cameraData = n.subscribe<sensor_msgs::Image>\
+                 ("/camera/rgb/image_raw", 100, \
+                  &Vision::cameraCallback, &camera);
 }
 
 Turtlebot::~Turtlebot() {}
 
 int Turtlebot::drive() {
-	auto dist = nomad.getObstacleRange();
-	ROS_INFO_STREAM("The distance to obstacle is : " << dist);
-	if (dist > 1.50) {
-		velPub.publish(nomad.moveCommand());
-		ROS_INFO_STREAM("Move command working !");
-		return 1;
-	} else {
-		velPub.publish(nomad.turnCommand());
-		ROS_INFO_STREAM("Turn command working !");
-		return 2;
-	}
+    auto dist = nomad.getObstacleRange();
+    ROS_INFO_STREAM("The distance to obstacle is : " << dist);
+    if (dist > 1.50) {
+        velPub.publish(nomad.moveCommand());
+        ROS_INFO_STREAM("Move command working !");
+        return 1;
+    } else {
+        velPub.publish(nomad.turnCommand());
+        ROS_INFO_STREAM("Turn command working !");
+        return 2;
+    }
 }
