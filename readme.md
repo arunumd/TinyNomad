@@ -23,7 +23,7 @@ This software is protected by MIT License. For more details refer [MIT License](
 
 ## Project Presentation
 Please follow the following Vimeo link for accessing the project presentation.
-![Video](https://vimeo.com/306788701)
+[Video](https://vimeo.com/306788701)
 
 ## Dependencies
 The project depends on the following libraries and environments:
