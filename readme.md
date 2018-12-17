@@ -107,7 +107,7 @@ make run_tests
 ## Code coverage report
 Coveralls does not seem to show code coverage despite successful build of all tests on travis. To mitigate the risks, I have included an alternative code coverage report from lcov. The following image is a snapshot of the report :
 
-[Coverage report](results/Code_coverage_report.png)
+![Coverage report](results/Code_coverage_report.png)
 
 ## How to save the RViZ generated environment ?
 ```
