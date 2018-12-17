@@ -1,6 +1,6 @@
 # TinyNomad
-[![Build Status](https://travis-ci.org/arunumd/TinyNomad.svg?branch=Backup)](https://travis-ci.org/arunumd/TinyNomad)
-[![Coverage Status](https://coveralls.io/repos/github/arunumd/TinyNomad/badge.svg?branch=Backup)](https://coveralls.io/github/arunumd/TinyNomad?branch=Backup)
+[![Build Status](https://travis-ci.org/arunumd/TinyNomad.svg?branch=master)](https://travis-ci.org/arunumd/TinyNomad)
+[![Coverage Status](https://coveralls.io/repos/github/arunumd/TinyNomad/badge.svg?branch=master)](https://coveralls.io/github/arunumd/TinyNomad?branch=master)
 ---
 
 ## Overview
@@ -74,10 +74,10 @@ sudo apt-get install ros-kinetic-map-server
 
 
 ## Solo Iterative Process(SIP) Log
-The following [link](https://drive.google.com/file/d/153M1aiCYegG0zRtJ9Sf43AjYE1P9QTQr/view?usp=sharing) contains the SIP log sheet with product backlog, iteration backlog and activity log.
+The following [link](https://docs.google.com/spreadsheets/d/1Kn-T82rxNShv8EdPKjXbgCW1Og-r3IYh0CAeqcCmaFo/edit?usp=sharing) contains the SIP log sheet with product backlog, iteration backlog and time log.
 
 ## Sprint Planning Notes
-The following [link](https://drive.google.com/file/d/1VqYlH_pGjYxlB-IP6AsRIp-IpPvnU8js/view?usp=sharing) contains the dynamic notes taken in respect to this project planning and execution.
+The following [link](https://docs.google.com/document/d/11MUv7aToBSHCazwkT5CRzVLH8ylfrhIsFciZ6vbo5yU/edit?usp=sharing) contains the dynamic notes taken in respect to this project planning and execution.
 
 ## How to run the project ?
 ```
@@ -190,3 +190,5 @@ cd ~/catkin_ws/src/TinyNomad/docs/html
 firefox index.html
 ```
 
+## Known Issues
+The Coveralls badge does not seem to get updated despite having successful build on Travis. Also, there could be some error messages on the terminal during launch of project. But these error messages do not affect the project.
