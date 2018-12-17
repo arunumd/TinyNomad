@@ -1,9 +1,9 @@
 /**************************************************************************************************
-* @file      : Vision.h
-* @author    : Arun Kumar Devarajulu
-* @date      : December 15, 2018
-* @copyright : 2018, Arun Kumar Devarajulu
-* @license   : MIT License
+* @file        Vision.h
+* @author      Arun Kumar Devarajulu
+* @date        December 15, 2018
+* @copyright   2018, Arun Kumar Devarajulu
+* @license     MIT License
 *
 *              Permission is hereby granted, free of charge, to any person obtaining a copy
 *              of this software and associated documentation files (the "Software"), to deal
@@ -23,7 +23,7 @@
 *              OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 *              SOFTWARE.
 *
-* @brief     : The Vision.h class is used for accessing images taken by turtlebot's RGB camera
+* @brief       The Vision.h class is used for accessing images taken by turtlebot's RGB camera
 ****************************************************************************************************/
 #pragma once
 #ifndef VISION_H_
@@ -41,25 +41,20 @@
 class Vision {
  public:
     /**
-    *@brief : Default constructor
+    *@brief   Default constructor
     */
     Vision();
 
     /**
-    *@brief : Default destructor
+    *@brief   Default destructor
     */
     ~Vision();
 
     /**
-    *@brief : Callback function for turtlebot camera subscriber
+    *@brief   Callback function for turtlebot camera subscriber
+    *@param   picture is the picture coming from the robot 
     */
     void cameraCallback(const sensor_msgs::ImageConstPtr& picture);
-
- private:
-    /**
-    *@brief : Create a nodehandle object
-    */
-    ros::NodeHandle cn;
 };
 
 #endif
