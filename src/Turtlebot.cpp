@@ -1,9 +1,9 @@
 /**************************************************************************************************
-* @file      : Turtlebot.cpp
-* @author    : Arun Kumar Devarajulu
-* @date      : December 12, 2018
-* @copyright : 2018, Arun Kumar Devarajulu
-* @license   : MIT License
+* @file        Turtlebot.cpp
+* @author      Arun Kumar Devarajulu
+* @date        December 12, 2018
+* @copyright   2018, Arun Kumar Devarajulu
+* @license     MIT License
 *
 *              Permission is hereby granted, free of charge, to any person obtaining a copy
 *              of this software and associated documentation files (the "Software"), to deal
@@ -23,7 +23,7 @@
 *              OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 *              SOFTWARE.
 *
-* @brief     : The Turtlebot.cpp class has the implementation for the Turtlebot class
+* @brief       The Turtlebot.cpp class has the implementation for the Turtlebot class
 ****************************************************************************************************/
 #include "Navigation.h"
 #include "Turtlebot.h"
