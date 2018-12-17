@@ -1,9 +1,9 @@
 /**************************************************************************************************
-* @file      : NavigationTest.cpp
-* @author    : Arun Kumar Devarajulu
-* @date      : December 15, 2018
-* @copyright : 2018, Arun Kumar Devarajulu
-* @license   : MIT License
+* @file        NavigationTest.cpp
+* @author      Arun Kumar Devarajulu
+* @date        December 15, 2018
+* @copyright   2018, Arun Kumar Devarajulu
+* @license     MIT License
 *
 *              Permission is hereby granted, free of charge, to any person obtaining a copy
 *              of this software and associated documentation files (the "Software"), to deal
@@ -23,46 +23,46 @@
 *              OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 *              SOFTWARE.
 *
-* @brief     : The NavigationTest.cpp file contains all the test cases for the Navigation class
+* @brief       The NavigationTest.cpp file contains all the test cases for the Navigation class
 ****************************************************************************************************/
-#include "ros/ros.h"
 #include <gtest/gtest.h>
 #include "../include/Navigation.h"
+#include "ros/ros.h"
 
 /**
-*@brief : Unit test to check if the linear velocity is constant
+*@brief   Unit test to check if the linear velocity is constant
 */
 TEST(NavigationTest, LinearTest) {
-	Navigation nav = Navigation();
-	EXPECT_EQ(1.0, nav.moveCommand().linear.x);
-	EXPECT_EQ(0.0, nav.moveCommand().linear.y);
-	EXPECT_EQ(0.0, nav.moveCommand().linear.z);
-	EXPECT_EQ(0.0, nav.moveCommand().angular.x);
-	EXPECT_EQ(0.0, nav.moveCommand().angular.y);
-	EXPECT_EQ(0.0, nav.moveCommand().angular.z);
+    Navigation nav = Navigation();
+    EXPECT_EQ(1.0, nav.moveCommand().linear.x);
+    EXPECT_EQ(0.0, nav.moveCommand().linear.y);
+    EXPECT_EQ(0.0, nav.moveCommand().linear.z);
+    EXPECT_EQ(0.0, nav.moveCommand().angular.x);
+    EXPECT_EQ(0.0, nav.moveCommand().angular.y);
+    EXPECT_EQ(0.0, nav.moveCommand().angular.z);
 }
 
 /**
-*@brief : Unit test to check if the turn velocity is positive
+*@brief   Unit test to check if the turn velocity is positive
 */
 TEST(NavigationTest, TurnTest) {
-	Navigation nav = Navigation();
-	EXPECT_EQ(0.0, nav.turnCommand().linear.x);
-	EXPECT_EQ(0.0, nav.turnCommand().linear.y);
-	EXPECT_EQ(0.0, nav.turnCommand().linear.z);
-	EXPECT_EQ(0.0, nav.turnCommand().angular.x);
-	EXPECT_EQ(0.0, nav.turnCommand().angular.y);
-	EXPECT_LE(1.0, nav.turnCommand().angular.z);
+    Navigation nav = Navigation();
+    EXPECT_EQ(0.0, nav.turnCommand().linear.x);
+    EXPECT_EQ(0.0, nav.turnCommand().linear.y);
+    EXPECT_EQ(0.0, nav.turnCommand().linear.z);
+    EXPECT_EQ(0.0, nav.turnCommand().angular.x);
+    EXPECT_EQ(0.0, nav.turnCommand().angular.y);
+    EXPECT_LE(1.0, nav.turnCommand().angular.z);
 }
 
 /**
-*@brief : Unit test to check callback function
+*@brief   Unit test to check callback function
 */
 TEST(NavigationTest, LaserTest) {
-	Navigation nav = Navigation();
-	ros::NodeHandle n;
-	ros::Subscriber laserSub =
-	    n.subscribe("/scan", 1000,
-	                &Navigation::laserCallback, &nav);
-	EXPECT_EQ(0.0, nav.getObstacleRange());
+    Navigation nav = Navigation();
+    ros::NodeHandle n;
+    ros::Subscriber laserSub =
+        n.subscribe("/scan", 1000,
+                    &Navigation::laserCallback, &nav);
+    EXPECT_EQ(0.0, nav.getObstacleRange());
 }
