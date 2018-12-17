@@ -1,10 +1,9 @@
-
 /**************************************************************************************************
-* @file      : VisionTest.cpp
-* @author    : Arun Kumar Devarajulu
-* @date      : December 15, 2018
-* @copyright : 2018, Arun Kumar Devarajulu
-* @license   : MIT License
+* @file        VisionTest.cpp
+* @author      Arun Kumar Devarajulu
+* @date        December 15, 2018
+* @copyright   2018, Arun Kumar Devarajulu
+* @license     MIT License
 *
 *              Permission is hereby granted, free of charge, to any person obtaining a copy
 *              of this software and associated documentation files (the "Software"), to deal
@@ -24,11 +23,12 @@
 *              OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 *              SOFTWARE.
 *
-* @brief     : The VisionTest.cpp file contains all the test cases for the Vision class
+* @brief       The VisionTest.cpp file contains all the test cases for the Vision class
 ****************************************************************************************************/
-#include "ros/ros.h"
 #include <gtest/gtest.h>
+#include "ros/ros.h"
 #include "../include/Vision.h"
 
+// There are no easily testable functions in this class
 TEST(VisionTest, First) {
 }
