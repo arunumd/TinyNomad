@@ -104,4 +104,4 @@ class Navigation {
     geometry_msgs::Twist drivePower;
 };
 
-#endif // NAVIGATION_H_
+#endif  // NAVIGATION_H_
