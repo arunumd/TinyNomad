@@ -9,6 +9,8 @@ find_package(catkin REQUIRED COMPONENTS
   image_transport
   message_generation
   move_base_msgs
+  geometry_msgs
+  genmsg
   roscpp
   rospy
   sensor_msgs
@@ -26,7 +28,7 @@ find_package(OpenCV REQUIRED COMPONENTS core imgproc highgui opencv_imgcodecs)
 
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
-include_directories(include ${catkin_INCLUDE_DIRS} ${OpenCV_INCLUDE_DIRS})
+include_directories(include test ${catkin_INCLUDE_DIRS} ${OpenCV_INCLUDE_DIRS})
 
 add_executable(tinynomad src/Navigation.cpp src/main.cpp src/Turtlebot.cpp src/Vision.cpp)
 
@@ -38,9 +40,9 @@ target_link_libraries(tinynomad ${catkin_LIBRARIES} ${OpenCV_LIBS})
 ###########
 
 if(CATKIN_ENABLE_TESTING)
-  find_package(rostest REQUIRED)
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -O0")
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --coverage")
+  find_package(rostest REQUIRED)
   add_rostest_gtest(tinynomadTest test/turtleTest.launch test/tinynomadTest.cpp test/NavigationTest.cpp 
                     test/VisionTest.cpp test/TurtlebotTest.cpp src/Navigation.cpp  
                     src/Vision.cpp src/Turtlebot.cpp)
