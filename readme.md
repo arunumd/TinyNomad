@@ -90,13 +90,14 @@ roslaunch tinynomad tinynomad.launch
 ```
 
 ## How to see the RViZ Visualization of the environment ?
+Once after you have started the robot simulation after following the previous step, you may now want to see the visualization ! For this, in a new terminal :
 ```
 cd ~/catkin_ws/
 source devel/setup.bash
 roslaunch tinynomad demo.launch
 ```
 
-## How to run the tests ?
+## How to run the google/ ros tests ?
 ```
 cd ~/catkin_ws/
 source devel/setup.bash
@@ -132,4 +133,56 @@ To view the pictures, in a new terminal
 gnome-open ~/.ros
 ```
 
+## Using Rosbag
+
+I would strongly suggest not to use rosbag because, the project has camera subscriber which continuously keeps saving images of the environment. The bag will become too swollen (of the order of GBs) very quick. Just for the sake of demonstration purposes, I have included an example rosbag file.
+
+To enable rosbag recording in roslaunch, in a new terminal :
+```
+cd ~/catkin_ws/
+source devel/setup.bash
+roslaunch tinynomad tinynomad.launch rec:=1
+```
+
+To inspect the recorded bag file, in a new terminal:
+```
+cd ~/catkin_ws/
+source devel/setup.bash
+cd src/TinyNomad/results
+rosbag info recording.bag
+```
+
+To replay the bag file, in a new terminal :
+```
+roscore
+```
+
+Then, in another terminal :
+```
+cd ~/catkin_ws/
+source devel/setup.bash
+cd src/TinyNomad/results
+rosbag play recording.bag
+```
+
+## Doxygen documentation
+
+If you already do not have doxygen, then in a new terminal:
+```
+sudo apt-get install doxygen
+```
+
+Then in the same terminal,
+```
+cd ~/catkin_ws/src/TinyNomad/docs/
+doxygen FinalProj.conf
+```
+
+The doxygen documentation will be generated in the /docs folder.
+
+If you would like to view the docs, then in a new terminal:
+```
+cd ~/catkin_ws/src/TinyNomad/docs/html
+firefox index.html
+```
 
