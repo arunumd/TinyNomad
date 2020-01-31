@@ -1,6 +1,7 @@
 # TinyNomad
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![BCH compliance](https://bettercodehub.com/edge/badge/arunumd/TinyNomad?branch=master)](https://bettercodehub.com/)
 [![Build Status](https://travis-ci.org/arunumd/TinyNomad.svg?branch=master)](https://travis-ci.org/arunumd/TinyNomad)
-[![Coverage Status](https://coveralls.io/repos/github/arunumd/TinyNomad/badge.svg?branch=master)](https://coveralls.io/github/arunumd/TinyNomad?branch=master)
 ---
 
 ## Overview
